@@ -1,0 +1,75 @@
+Step 1: Understand the problem and sample test cases
+
+The problem give 2 values input: N (number friends) and M (number left shoes)
+Output is find minimum number of extra shoes
+So, We can found that N * 2 = the total number of shoes the chef need to buy
+Now we have total shoes (N * 2), take total shoes minus number left shoes equal right left shoes
+
+Step 2: Generate examples - Create 10 input and output cases of your own
+Input:
+6
+1 4
+2 4
+3 4
+4 4
+5 4
+6 4
+Output: 
+1
+2
+3
+4
+6
+8
+
+
+Step 3: Observations / Pattern - Observe your examples to identify the logic
+
+Left Shoe: *
+Right Shoe: /;
+
+Test case 1: (N < M)
+Input: 1 4
+1*2 = 2 (The number of shoes)
+4 (The left shoes)
+Because have 4 shoes, so we only add 1 right shoes to total shoes(left shoes + right shoes) = the number of shoes = 2
+/ / / /
+*/ */
+=>The minimum extra shoes = 2/2 = the number of shoes/2
+
+Test caes 4: (N = M)
+Input: 4 4
+4*2 = 8 (The number of shoes)
+4 (The left shoes)
+Because have 8 shoes, so we add 4 right shoes to total shoes(left shoes + right shoes) = the number of shoes = 8
+/ / / / / / / /
+*/ */ */ */ */ */ */ */
+=>The minimum extra shoes = 8/2 = the number of shoes/2
+
+=>With case(N<=M) => The minimum extra shoes = the number of shoes/2 = N*2/2 = N
+
+Test case 5,6 (N > M)
+Input: 5 4
+5*2 = 10 (The number of shoes)
+4 = (The left shoes)
+Because have 4 shoes, so we add 5 right shoes + 1 left shoes to total shoes = the number of shoes
+=>The minimum extra shoes = The number of shoes - the left shoes = 10-4 = 6
+Input: 6 4 
+Output: 6*2-4 = 8
+
+Step 4: Plan your code - Modularise and solve sub-components of your problem
+Build a program run each test case
+if(N<=M) cout<<N;
+else cout<<2*N-M;
+cout<<"\n";
+
+Step 5: Learn - You may come across components of you logic where you don't know how to execute the code.
+In such cases, ask Google or ChatGPT or your friends and learn!
+Step 6: Write the code - For simpler programming problems - C++ solutions will be less than 20 lines in more than 95% of the cases.
+Input number test case
+Build program in step 4 by loop
+
+int n; cin>>n;
+while(n--){
+ program step 4:
+}
